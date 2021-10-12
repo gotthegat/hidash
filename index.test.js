@@ -1,16 +1,16 @@
 const { forEach, map } = require("./index");
 const assert = require("assert");
 
-const test = (desc, func) => {
-  console.log("----", desc);
-  try {
-    func();
-  } catch (err) {
-    console.log(err.message);
-  }
-};
+// const test = (desc, func) => {
+//   console.log("----", desc);
+//   try {
+//     func();
+//   } catch (err) {
+//     console.log(err.message);
+//   }
+// };
 
-test("The forEach function", () => {
+it("The forEach function", () => {
   // test forEach
   let sum = 0;
   forEach([1, 2, 3], (value) => {
@@ -24,7 +24,7 @@ test("The forEach function", () => {
   //   }
 });
 
-test("The map function", () => {
+it("The map function", () => {
   // test map
   const result = map([1, 2, 3], (value) => {
     return value * 2;
